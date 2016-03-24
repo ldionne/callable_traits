@@ -6,6 +6,8 @@ Distributed under the Boost Software License, Version 1.0.
 
 # CallableTraits
 
+[![Join the chat at https://gitter.im/badair/callable_traits](https://badges.gitter.im/badair/callable_traits.svg)](https://gitter.im/badair/callable_traits?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 <!--![Build Status](https://travis-ci.org/badair/CLBL.svg?branch=master)-->
 
 <!--[![Join the chat at https://gitter.im/badair/CLBL](https://badges.gitter.im/badair/CLBL.svg)](https://gitter.im/badair/CLBL?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) -->
