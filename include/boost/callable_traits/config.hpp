@@ -22,22 +22,20 @@ Distributed under the Boost Software License, Version 1.0.
 
 #ifdef __cpp_transactional_memory
 #define CALLABLE_TRAITS_ENABLE_TRANSACTION_SAFE
+#define CALLABLE_TRAITS_TRANSACTION_SAFE_SPECIFIER_ACTUAL transaction_safe
+#define CALLABLE_TRAITS_TRANSACTION_SAFE_DYNAMIC_SPECIFIER_ACTUAL transaction_safe_dynamic
+#else
+# define CALLABLE_TRAITS_TRANSACTION_SAFE_SPECIFIER_ACTUAL
+# define CALLABLE_TRAITS_TRANSACTION_SAFE_DYNAMIC_SPECIFIER_ACTUAL
 #endif
 
-#ifdef CALLABLE_TRAITS_ENABLE_TRANSACTION_SAFE
-#  define CALLABLE_TRAITS_TRANSACTION_SAFE_SPECIFIER transaction_safe
-#else
-#  define CALLABLE_TRAITS_TRANSACTION_SAFE_SPECIFIER
+#ifdef __cpp_noexcept_function_type
+#define CALLABLE_TRAITS_ENABLE_NOEXCEPT_TYPES
 #endif
 
 #ifndef __clang__
 #  if defined(__GNUC__)
 #    define CALLABLE_TRAITS_GCC
-#    if __GNUC__ >= 7
-#      ifndef CALLABLE_TRAITS_ENABLE_NOEXCEPT_TYPES
-#        define CALLABLE_TRAITS_ENABLE_NOEXCEPT_TYPES
-#      endif
-#    endif
 #    if __GNUC__ >= 6
 #        define CALLABLE_TRAITS_GCC_AT_LEAST_6_0_0
 #    endif
