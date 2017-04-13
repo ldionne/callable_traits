@@ -28,10 +28,8 @@ Distributed under the Boost Software License, Version 1.0.
 # define CALLABLE_TRAITS_ENABLE_NOEXCEPT_TYPES
 #endif
 
-#ifdef CALLABLE_TRAITS_ENABLE_TRANSACTION_SAFE
-#  define CALLABLE_TRAITS_TRANSACTION_SAFE_SPECIFIER transaction_safe
-#else
-#  define CALLABLE_TRAITS_TRANSACTION_SAFE_SPECIFIER
+#ifdef __cpp_noexcept_function_type
+#define CALLABLE_TRAITS_ENABLE_NOEXCEPT_TYPES
 #endif
 
 #ifndef __clang__
