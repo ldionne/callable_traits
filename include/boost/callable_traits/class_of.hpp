@@ -62,7 +62,7 @@ struct class_of : detail::class_of_impl<T> {};
 [table
     [[`T`]                              [`class_of_t<T>`]]
     [[`int foo::*`]                     [`foo`]]
-    [[`void(foo::*)() const`]           [`foo`]]
+    [[`void(foo::* const &)() const`]           [`foo`]]
 ]
 
 [heading Example Program]

@@ -150,7 +150,7 @@ struct function<Return (Args..., ...)
     BOOST_CLBL_TRTS_INCLUDE_QUALIFIERS
     BOOST_CLBL_TRTS_INCLUDE_TRANSACTION_SAFE
     BOOST_CLBL_TRTS_NOEXCEPT_SPEC>
- : default_callable_traits<> {
+ : default_callable_traits<dummy BOOST_CLBL_TRTS_INCLUDE_QUALIFIERS> {
      
     static constexpr bool value = true;
     

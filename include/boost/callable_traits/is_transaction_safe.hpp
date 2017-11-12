@@ -75,7 +75,7 @@ constexpr bool is_transaction_safe_v = //see below
     [[`int() const transaction_safe`]   [`true`]]
     [[`int(*)() transaction_safe`]      [`true`]]
     [[`int(&)() transaction_safe`]      [`true`]]
-    [[`int(foo::*)() transaction_safe`] [`true`]]
+    [[`int(foo::* const)() transaction_safe`] [`true`]]
     [[`int() const`]                    [`false`]]
     [[`int() volatile`]                 [`false`]]
     [[`int(foo::*)() const`]            [`false`]]

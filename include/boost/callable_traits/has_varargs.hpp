@@ -74,7 +74,7 @@ constexpr bool has_varargs_v = //see below
     [[`T`]                              [`has_varargs_v<T>`]]
     [[`void(...)`]                      [`true`]]
     [[`void(int, ...) const`]           [`true`]]
-    [[`void(*)(...)`]                   [`true`]]
+    [[`void(* volatile)(...)`]          [`true`]]
     [[`void(&)(...)`]                   [`true`]]
     [[`void(foo::*)(...) const`]        [`true`]]
     [[`void(*)()`]                      [`false`]]

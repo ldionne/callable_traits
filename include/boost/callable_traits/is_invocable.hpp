@@ -91,6 +91,7 @@ constexpr bool is_invocable_r_v = //see below
 
 [heading Behavior]
 * standalone c++11 implementation of c++17 `std::is_invocable`, `std::is_invocable_r`
+[note ref-qualified overloads of `operator()` with different signatures are not handled correctly yet.]
 
 [heading Example Program]
 [import ../example/is_invocable.cpp]

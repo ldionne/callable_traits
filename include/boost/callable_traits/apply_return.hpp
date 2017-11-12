@@ -75,6 +75,7 @@ struct apply_return : detail::apply_return_impl<T, R> {};
   * function reference
   * member function pointer
   * member data pointer
+* If `T` is a pointer, it may not be cv/ref qualified
 
 [heading Behavior]
 * When `T` is `std::tuple<Args...>`, the aliased type is `R(Args...)`.

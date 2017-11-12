@@ -70,7 +70,7 @@ constexpr bool is_noexcept_v = //see below
 [table
     [[`T`]                              [`is_noexcept_v<T>`]]
     [[`int() const noexcept`]           [`true`]]
-    [[`int(*)() noexcept`]              [`true`]]
+    [[`int(* const &)() noexcept`]      [`true`]]
     [[`int(&)() noexcept`]              [`true`]]
     [[`int(foo::*)() noexcept`]         [`true`]]
     [[`int() const`]                    [`false`]]

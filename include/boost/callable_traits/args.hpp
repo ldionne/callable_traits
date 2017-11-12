@@ -78,7 +78,7 @@ struct args : detail::args_impl<T, Container> {};
     [[`void(&)(float, char, int)`]      [`std::tuple<float, char, int`]]
     [[`void(float, char, int) const &&`][`std::tuple<float, char, int>`]]
     [[`void(*)()`]                      [`std::tuple<>`]]
-    [[`void(foo::*)(float, char, int)`] [`std::tuple<foo&, float, char, int>`]]
+    [[`void(foo::* const &)(float, char, int)`] [`std::tuple<foo&, float, char, int>`]]
     [[`int(foo::*)(int) const`]         [`std::tuple<const foo&, int>`]]
     [[`void(foo::*)() volatile &&`]     [`std::tuple<volatile foo &&>`]]
     [[`int foo::*`]                     [`std::tuple<const foo&>`]]

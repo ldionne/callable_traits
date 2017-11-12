@@ -56,6 +56,7 @@ struct add_varargs : detail::add_varargs_impl<T> {};
   * function pointer type
   * function reference type
   * member function pointer type
+* If `T` is a pointer, it may not be cv/ref qualified
 
 [heading Behavior]
 * A substitution failure occurs if the constraints are violated.

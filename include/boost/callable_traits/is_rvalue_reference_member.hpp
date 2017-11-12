@@ -77,7 +77,7 @@ constexpr bool is_rvalue_reference_member_v = //see below
     [[`int(foo::*)() &&`]               [`true`]]
     [[`int() const`]                    [`false`]]
     [[`int() volatile`]                 [`false`]]
-    [[`int(foo::*)() const`]            [`false`]]
+    [[`int(foo::* volatile)() const`]   [`false`]]
     [[`int() const`]                    [`false`]]
     [[`int() volatile`]                 [`false`]]
     [[`int() &`]                        [`false`]]

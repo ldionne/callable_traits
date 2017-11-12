@@ -73,7 +73,7 @@ constexpr bool has_void_return_v = //see below
     [[`T`]                              [`has_void_return_v<T>`]]
     [[`void()`]                         [`true`]]
     [[`void(int) const`]                [`true`]]
-    [[`void(*)()`]                      [`true`]]
+    [[`void(* const &)()`]              [`true`]]
     [[`void(&)()`]                      [`true`]]
     [[`void(foo::*)() const`]           [`true`]]
     [[`int(*)()`]                       [`false`]]

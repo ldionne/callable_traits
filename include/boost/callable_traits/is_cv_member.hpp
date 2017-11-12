@@ -72,7 +72,7 @@ constexpr bool is_cv_member_v = //see below
     [[`T`]                              [`is_cv_member_v<T>`]]
     [[`int() const volatile`]           [`true`]]
     [[`int() const volatile &`]         [`true`]]
-    [[`int(foo::*)() const volatile`]   [`true`]]
+    [[`int(foo::* const &)() const volatile`] [`true`]]
     [[`int() const`]                    [`false`]]
     [[`int() volatile`]                 [`false`]]
     [[`int(foo::*)() const`]            [`false`]]

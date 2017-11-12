@@ -26,7 +26,7 @@ template<typename T>
 using qualified_class_of_t = //see below
 //<-
     detail::try_but_fail_if_invalid<
-        typename detail::traits<T>::invoke_type,
+        typename detail::traits<detail::shallow_decay<T>>::invoke_type,
         type_is_not_a_member_pointer>;
 
 namespace detail {
@@ -64,9 +64,9 @@ struct qualified_class_of : detail::qualified_class_of_impl<T> {};
 [table
     [[`T`]                              [`qualified_class_of_t<T>`]]
     [[`void(foo::*)()`]                 [`foo &`]]
-    [[`void(foo::*)() const`]           [`foo const &`]]
+    [[`void(foo::* volatile)() const`]           [`foo const &`]]
     [[`void(foo::*)() &&`]              [`foo &&`]]
-    [[`void(foo::*)() volatile &&`]     [`foo volatile &&`]]
+    [[`void(foo::*&)() volatile &&`]     [`foo volatile &&`]]
     [[`int foo::*`]                     [`foo const &`]]
     [[`const int foo::*`]               [`foo const &`]]
 ]

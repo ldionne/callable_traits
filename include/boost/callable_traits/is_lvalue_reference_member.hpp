@@ -72,7 +72,7 @@ constexpr bool is_lvalue_reference_member_v = //see below
 [table
     [[`T`]                              [`is_lvalue_reference_member_v<T>`]]
     [[`int() &`]                        [`true`]]
-    [[`int(foo::*)() const &`]          [`true`]]
+    [[`int(foo::* const)() const &`]    [`true`]]
     [[`int() const`]                    [`false`]]
     [[`int() volatile`]                 [`false`]]
     [[`int(foo::*)() const`]            [`false`]]

@@ -78,6 +78,7 @@ struct add_transaction_safe
   * function pointer type
   * function reference type
   * member function pointer type
+* If `T` is a pointer, it may not be cv/ref qualified
 
 [heading Behavior]
 * A substitution failure occurs if the constraints are violated.

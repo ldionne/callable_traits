@@ -91,8 +91,8 @@ struct apply_member_pointer : detail::apply_member_pointer_impl<T, C> {};
 
 [heading Behavior]
 * A substitution failure occurs if the constraints are violated.
-* When `T` is a function, function pointer, or function reference, then the aliased type is a member function pointer of `C` with the same parameters and return type.
-* When `T` is a member function pointer of any type, the aliased type is a member function pointer of `C` with the same parameters and return type.
+* When `T` is a function, function pointer (unqualified), or function reference, then the aliased type is a member function pointer of `C` with the same parameters and return type.
+* When `T` is a member function pointer (unqualified)  of any type, the aliased type is a member function pointer of `C` with the same parameters and return type.
 * Otherwise, the aliased type is a member data pointer equivalent to `std::remove_reference_t<T> C::*`.
 
 [heading Input/Output Examples]

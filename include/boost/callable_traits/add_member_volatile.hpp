@@ -68,6 +68,7 @@ struct add_member_volatile : detail::add_member_volatile_impl<T> {};
 /*`
 [heading Constraints]
 * `T` must be a function type or a member function pointer type
+* If `T` is a pointer, it may not be cv/ref qualified
 
 [heading Behavior]
 * A substitution failure occurs if the constraints are violated.

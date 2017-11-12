@@ -54,6 +54,7 @@ struct remove_member_reference
 /*`
 [heading Constraints]
 * `T` must be a function type or a member function pointer type
+* If `T` is a pointer, it may not be cv/ref qualified
 
 [heading Behavior]
 * A substitution failure occuers if the constraints are violated.
