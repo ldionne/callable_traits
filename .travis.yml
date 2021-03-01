@@ -169,6 +169,7 @@ matrix:
             - llvm-toolchain-trusty-4.0
 
     - os: linux
+      dist: xenial
       compiler: clang++-5.0
       env: TOOLSET=clang COMPILER=clang++-5.0 CXXSTD=11,14,1z,17
       addons:
@@ -177,9 +178,9 @@ matrix:
             - clang-5.0
           sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-5.0
 
     - os: linux
+      dist: xenial
       compiler: clang++-6.0
       env: TOOLSET=clang COMPILER=clang++-6.0 CXXSTD=11,14,1z,17
       addons:
@@ -188,7 +189,6 @@ matrix:
             - clang-6.0
           sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-6.0
 
     - os: linux
       compiler: clang++-7
